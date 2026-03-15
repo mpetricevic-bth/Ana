@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio 53 – Pozivnice za vjenčanje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header id="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-number">53</span>
+        <span class="logo-text">STUDIO</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Početna</a></li>
+        <li><a href="#about" class="nav-link">O nama</a></li>
+        <li><a href="#services" class="nav-link">Usluge</a></li>
+        <li><a href="#portfolio" class="nav-link">Galerija</a></li>
+        <li><a href="#web-invite" class="nav-link">Web pozivnica</a></li>
+        <li><a href="#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Izbornik">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Zagreb · Studio 53</p>
+      <h1 class="hero-title">Svaki ljubavni spoj<br><em>zaslužuje savršen početak</em></h1>
+      <p class="hero-subtitle">Izrađujemo personalizirane pozivnice i web pozivnice za vjenčanja – s pažnjom prema svakom detalju.</p>
+      <a href="#services" class="btn btn-primary">Pogledaj usluge</a>
+    </div>
+    <div class="hero-scroll" id="heroScroll">
+      <span>Pomakni prema dolje</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Konzultacija</h3>
+          <p>Upoznajemo vas i vaš stil te zajedno definiramo viziju vašeg savršenog dana.</p>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Dizajn</h3>
+          <p>Kreiramo jedinstveni dizajn koji odražava vašu priču i estetiku vjenčanja.</p>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Isporuka</h3>
+          <p>Tiskane pozivnice dostavljamo na kućnu adresu, web pozivnicu aktiviramo odmah.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / CATEGORIES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament">✦</div>
+        <h2 class="section-title">Naše usluge</h2>
+        <p class="section-sub">Sve što trebate za nezaboravan prvi dojam</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80')"></div>
+          <div class="service-body">
+            <h3>Tiskane pozivnice</h3>
+            <p>Luksuzni papiri, zlatotiski, laserski rez i klasičan tisak – pozivnica koja ostaje kao uspomena.</p>
+            <a href="#contact" class="link-arrow">Saznaj više →</a>
+          </div>
+        </div>
+        <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80')"></div>
+          <div class="service-badge">Popularno</div>
+          <div class="service-body">
+            <h3>Web pozivnica</h3>
+            <p>Elegantna digitalna pozivnica s animacijama, RSVP formom i kartom – dijelite jednim klikom.</p>
+            <a href="#web-invite" class="link-arrow">Pogledaj demo →</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80')"></div>
+          <div class="service-body">
+            <h3>Svadbeni komplet</h3>
+            <p>Pozivnice, zahvalnice, meniji, stolni raspored – cijeli vizualni identitet vašeg vjenčanja.</p>
+            <a href="#contact" class="link-arrow">Saznaj više →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-images">
+        <div class="about-img-main" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=700&q=80')"></div>
+        <div class="about-img-accent" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80')"></div>
+      </div>
+      <div class="about-content">
+        <div class="ornament">✦</div>
+        <h2 class="section-title left">Priča o nama</h2>
+        <p class="about-lead">Studio 53 je boutique studio za izradu vjenčanih pozivnica smješten u srcu Zagreba.</p>
+        <p>Vjerujemo da je pozivnica prvi dodir između vas i vaših gostiju – prvi nagovještaj emocije, stila i ljubavi koja vas čeka. Svaki projekt tretiramo kao jedinstvenu priču koju zaslužuje biti ispričana na najljepši mogući način.</p>
+        <p>Radimo u suradnji s parovima koji cijene estetiku, pažnju prema detalju i osobni pristup. Od prvog sastanka do isporuke – vi ste u središtu svega što radimo.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <span class="value-icon">◇</span>
+            <div>
+              <strong>Personalizacija</strong>
+              <p>Svaki dizajn nastaje od nule, za vas.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">◇</span>
+            <div>
+              <strong>Kvaliteta</strong>
+              <p>Premium materijali i precizna izrada.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">◇</span>
+            <div>
+              <strong>Rok isporuke</strong>
+              <p>Uvijek na vrijeme, bez kompromisa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament">✦</div>
+        <h2 class="section-title">Galerija radova</h2>
+        <p class="section-sub">Svaki par, svoja priča</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item tall" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&q=80')">
+          <div class="portfolio-overlay"><span>Klasična elegancija</span></div>
+        </div>
+        <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1517722014278-c256a91a6fba?w=600&q=80')">
+          <div class="portfolio-overlay"><span>Boho stil</span></div>
+        </div>
+        <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80')">
+          <div class="portfolio-overlay"><span>Minimalistički</span></div>
+        </div>
+        <div class="portfolio-item wide" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80')">
+          <div class="portfolio-overlay"><span>Zlatni detalji</span></div>
+        </div>
+        <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600&q=80')">
+          <div class="portfolio-overlay"><span>Romantični</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEB INVITATION DEMO -->
+  <section id="web-invite" class="web-invite-section">
+    <div class="web-invite-bg"></div>
+    <div class="container web-invite-inner">
+      <div class="section-header light">
+        <div class="ornament">✦</div>
+        <h2 class="section-title">Web pozivnica</h2>
+        <p class="section-sub">Elegancija u digitalnom obliku</p>
+      </div>
+      <div class="invite-demo">
+        <div class="invite-card">
+          <div class="invite-card-top">
+            <div class="invite-ornament">❧</div>
+            <p class="invite-date-label">Vjenčanje</p>
+            <h2 class="invite-names">Ana &amp; Marko</h2>
+            <div class="invite-divider"></div>
+            <p class="invite-date">Subota, 14. lipnja 2025.</p>
+            <p class="invite-place">Dvorac Erdödy, Jastrebarsko</p>
+          </div>
+          <div class="invite-card-body">
+            <p class="invite-message">S radošću vas pozivamo da podijelite s nama ovaj poseban dan ispunjen ljubavlju i srećom.</p>
+            <div class="invite-countdown" id="countdown">
+              <div class="count-item"><span id="days">--</span><label>Dana</label></div>
+              <div class="count-item"><span id="hours">--</span><label>Sati</label></div>
+              <div class="count-item"><span id="minutes">--</span><label>Minuta</label></div>
+              <div class="count-item"><span id="seconds">--</span><label>Sekundi</label></div>
+            </div>
+            <div class="invite-rsvp">
+              <p class="rsvp-label">Potvrdite dolazak do 1. svibnja</p>
+              <div class="rsvp-buttons">
+                <button class="rsvp-btn yes" onclick="rsvpSelect(this, 'yes')">Dolazim ✓</button>
+                <button class="rsvp-btn no" onclick="rsvpSelect(this, 'no')">Ne mogu ✗</button>
+              </div>
+              <div class="rsvp-confirm" id="rsvpConfirm"></div>
+            </div>
+          </div>
+        </div>
+        <div class="invite-features">
+          <h3>Što uključuje web pozivnica?</h3>
+          <ul>
+            <li><span>✦</span> Personalizirani dizajn</li>
+            <li><span>✦</span> Odbrojavanje do vjenčanja</li>
+            <li><span>✦</span> RSVP forma za goste</li>
+            <li><span>✦</span> Karta lokacije</li>
+            <li><span>✦</span> Galerija fotografija para</li>
+            <li><span>✦</span> Prilagođena domenska adresa</li>
+            <li><span>✦</span> Mobilna optimiziranost</li>
+            <li><span>✦</span> Animirani uvod</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Naruči web pozivnicu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament">✦</div>
+        <h2 class="section-title">Što kažu naši parovi</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Studio 53 je napravio savršene pozivnice za naše vjenčanje. Svaki detalj je bio točno onako kako smo zamislili. Gosti su bili oduševljeni!"</p>
+          <div class="testimonial-author">
+            <strong>Petra &amp; Ivan</strong>
+            <span>Vjenčanje, lipanj 2024.</span>
+          </div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="stars">★★★★★</div>
+          <p>"Web pozivnica je bila hit kod svih naših gostiju. Jednostavno dijeljenje, prekrasan dizajn i RSVP forma koja nam je uštedila toliko vremena!"</p>
+          <div class="testimonial-author">
+            <strong>Marina &amp; Luka</strong>
+            <span>Vjenčanje, rujan 2024.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Profesionalnost, brzina i nevjerojatan estetski osjećaj. Preporučujem Studio 53 svim parovima koji žele nešto posebno i personalizirano."</p>
+          <div class="testimonial-author">
+            <strong>Ana &amp; Tomislav</strong>
+            <span>Vjenčanje, svibanj 2024.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div class="ornament">✦</div>
+        <h2 class="section-title left">Kontaktirajte nas</h2>
+        <p>Zakažite besplatnu konzultaciju i zajedno ćemo kreirati savršenu pozivnicu za vaš poseban dan.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">◎</span>
+            <div>
+              <strong>Adresa</strong>
+              <p>Dužice 16A, Zagreb</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">◎</span>
+            <div>
+              <strong>Telefon</strong>
+              <p><a href="tel:+385996567474">+385 99 656 7474</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">◎</span>
+            <div>
+              <strong>Radno vrijeme</strong>
+              <p>Pon–Pet: 09:00 – 17:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Pinterest</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Vaše ime</label>
+            <input type="text" id="name" name="name" placeholder="Ana i Marko" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email adresa</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="weddingDate">Datum vjenčanja</label>
+          <input type="date" id="weddingDate" name="weddingDate" />
+        </div>
+        <div class="form-group">
+          <label for="service">Usluga koja vas zanima</label>
+          <select id="service" name="service">
+            <option value="">Odaberite uslugu...</option>
+            <option value="tiskane">Tiskane pozivnice</option>
+            <option value="web">Web pozivnica</option>
+            <option value="komplet">Svadbeni komplet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Poruka</label>
+          <textarea id="message" name="message" rows="4" placeholder="Opišite nam vaše viđenje savršene pozivnice..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Pošalji upit</button>
+        <div class="form-success" id="formSuccess">Hvala! Javit ćemo se u roku 24 sata. ✦</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div>
+        <h3>Budite u tijeku</h3>
+        <p>Inspiracije, trendovi vjenčanog dizajna i posebne ponude – direktno u vaš inbox.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Vaša email adresa" required />
+        <label class="checkbox-label">
+          <input type="checkbox" required />
+          <span>Prihvaćam korištenje osobnih podataka u svrhu primanja newslettera.</span>
+        </label>
+        <button type="submit" class="btn btn-outline">Prijavi me</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-number">53</span>
+        <span class="logo-text">STUDIO</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#home">Početna</a>
+        <a href="#about">O nama</a>
+        <a href="#services">Usluge</a>
+        <a href="#portfolio">Galerija</a>
+        <a href="#web-invite">Web pozivnica</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <p class="footer-legal">Studio 53 · Dužice 16A, Zagreb · <a href="tel:+385996567474">+385 99 656 7474</a></p>
+      <p class="footer-copy">&copy; 2025 Studio 53. Sva prava pridržana. &nbsp;|&nbsp; <a href="#">Uvjeti korištenja</a> &nbsp;|&nbsp; <a href="#">Politika privatnosti</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
