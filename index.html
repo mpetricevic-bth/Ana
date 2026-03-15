@@ -192,7 +192,7 @@
             <p class="invite-date-label">Vjenčanje</p>
             <h2 class="invite-names">Ana &amp; Marko</h2>
             <div class="invite-divider"></div>
-            <p class="invite-date">Subota, 14. lipnja 2025.</p>
+            <p class="invite-date" id="inviteDisplayDate">—</p>
             <p class="invite-place">Dvorac Erdödy, Jastrebarsko</p>
           </div>
           <div class="invite-card-body">
@@ -273,7 +273,7 @@
       <div class="contact-info">
         <div class="ornament">✦</div>
         <h2 class="section-title left">Kontaktirajte nas</h2>
-        <p>Zakažite besplatnu konzultaciju i zajedno ćemo kreirati savršenu pozivnicu za vaš poseban dan.</p>
+        <p>Zakažite besplatnu konzultaciju putem telefona ili poruke – i zajedno ćemo kreirati savršenu pozivnicu za vaš poseban dan.</p>
         <div class="contact-details">
           <div class="contact-item">
             <span class="contact-icon">◎</span>
@@ -292,15 +292,26 @@
           <div class="contact-item">
             <span class="contact-icon">◎</span>
             <div>
-              <strong>Radno vrijeme</strong>
-              <p>Pon–Pet: 09:00 – 17:00</p>
+              <strong>Email</strong>
+              <p><a href="mailto:studio53@gmail.com">studio53@gmail.com</a></p>
             </div>
           </div>
         </div>
         <div class="social-links">
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">Facebook</a>
-          <a href="#" class="social-link">Pinterest</a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
         </div>
       </div>
       <form class="contact-form" id="contactForm">
@@ -333,24 +344,6 @@
         </div>
         <button type="submit" class="btn btn-primary full-width">Pošalji upit</button>
         <div class="form-success" id="formSuccess">Hvala! Javit ćemo se u roku 24 sata. ✦</div>
-      </form>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="container newsletter-inner">
-      <div>
-        <h3>Budite u tijeku</h3>
-        <p>Inspiracije, trendovi vjenčanog dizajna i posebne ponude – direktno u vaš inbox.</p>
-      </div>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Vaša email adresa" required />
-        <label class="checkbox-label">
-          <input type="checkbox" required />
-          <span>Prihvaćam korištenje osobnih podataka u svrhu primanja newslettera.</span>
-        </label>
-        <button type="submit" class="btn btn-outline">Prijavi me</button>
       </form>
     </div>
   </section>

@@ -69,27 +69,63 @@ if (heroScroll) {
 }
 
 /* ── COUNTDOWN TIMER ────────────────────────────────────── */
-// Wedding date for demo — 14 June 2025
-const weddingDate = new Date('2025-06-14T14:00:00').getTime();
+// Generate a random wedding date: between 4 and 22 months from today
+function randomFutureWeddingDate() {
+  const now        = new Date();
+  const minDays    = 120;   // ~4 months
+  const maxDays    = 660;   // ~22 months
+  const randomDays = Math.floor(Math.random() * (maxDays - minDays + 1)) + minDays;
+
+  const target = new Date(now.getTime() + randomDays * 24 * 60 * 60 * 1000);
+
+  // Snap to nearest Saturday (day 6)
+  const dayOfWeek = target.getDay();
+  const daysToSat = (6 - dayOfWeek + 7) % 7;
+  target.setDate(target.getDate() + daysToSat);
+  target.setHours(14, 0, 0, 0); // ceremony at 14:00
+
+  return target;
+}
+
+// Croatian month names & day names
+const HR_MONTHS = [
+  'siječnja','veljače','ožujka','travnja','svibnja','lipnja',
+  'srpnja','kolovoza','rujna','listopada','studenog','prosinca'
+];
+const HR_WEEKDAYS = ['Nedjelja','Ponedjeljak','Utorak','Srijeda','Četvrtak','Petak','Subota'];
+
+function formatHrDate(date) {
+  const day  = HR_WEEKDAYS[date.getDay()];
+  const d    = date.getDate();
+  const mon  = HR_MONTHS[date.getMonth()];
+  const year = date.getFullYear();
+  return `${day}, ${d}. ${mon} ${year}.`;
+}
+
+// Set the target date once per page load
+const weddingDate     = randomFutureWeddingDate();
+const weddingDateMs   = weddingDate.getTime();
+
+// Update the invite card's displayed date
+const displayDateEl = document.getElementById('inviteDisplayDate');
+if (displayDateEl) displayDateEl.textContent = formatHrDate(weddingDate);
 
 function updateCountdown() {
-  const now  = Date.now();
-  const diff = weddingDate - now;
+  const diff = weddingDateMs - Date.now();
 
   if (diff <= 0) {
-    document.getElementById('days').textContent    = '00';
-    document.getElementById('hours').textContent   = '00';
-    document.getElementById('minutes').textContent = '00';
-    document.getElementById('seconds').textContent = '00';
+    ['days','hours','minutes','seconds'].forEach(id => {
+      document.getElementById(id).textContent = '00';
+    });
     return;
   }
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const s = Math.floor((diff % (1000 * 60)) / 1000);
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000)  / 60000);
+  const s = Math.floor((diff % 60000)    / 1000);
 
-  document.getElementById('days').textContent    = String(d).padStart(2, '0');
+  document.getElementById('days').textContent    = String(d).padStart(3, '0');
   document.getElementById('hours').textContent   = String(h).padStart(2, '0');
   document.getElementById('minutes').textContent = String(m).padStart(2, '0');
   document.getElementById('seconds').textContent = String(s).padStart(2, '0');
@@ -140,27 +176,6 @@ if (contactForm) {
   });
 }
 
-/* ── NEWSLETTER FORM ────────────────────────────────────── */
-const newsletterForm = document.getElementById('newsletterForm');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = newsletterForm.querySelector('button');
-    btn.textContent = 'Prijavljeno ✓';
-    btn.disabled    = true;
-    btn.style.background = 'var(--gold)';
-    btn.style.color      = '#fff';
-    btn.style.borderColor = 'var(--gold)';
-    setTimeout(() => {
-      newsletterForm.reset();
-      btn.textContent = 'Prijavi me';
-      btn.disabled    = false;
-      btn.style.background  = '';
-      btn.style.color       = '';
-      btn.style.borderColor = '';
-    }, 3500);
-  });
-}
 
 /* ── SIMPLE AOS (Animate On Scroll) ────────────────────── */
 function initAOS() {

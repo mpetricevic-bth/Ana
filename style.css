@@ -635,10 +635,11 @@ input, textarea, select, button { font-family: inherit; }
 .count-item span {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--charcoal);
   line-height: 1;
+  letter-spacing: 0.04em;
 }
 .count-item label {
   font-size: 0.65rem;
@@ -824,21 +825,30 @@ input, textarea, select, button { font-family: inherit; }
 .contact-item a:hover { color: var(--gold-dark); }
 .social-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 .social-link {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--charcoal);
-  padding-bottom: 2px;
-  border-bottom: 1px solid var(--light-gray);
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--light-gray);
   transition: var(--transition);
+  border-radius: var(--radius);
 }
+.social-link svg { flex-shrink: 0; transition: var(--transition); }
 .social-link:hover {
   color: var(--gold-dark);
   border-color: var(--gold);
+  background: rgba(201,169,110,0.06);
 }
+.social-link:hover svg { stroke: var(--gold-dark); }
 
 /* Form */
 .contact-form {
@@ -890,56 +900,6 @@ input, textarea, select, button { font-family: inherit; }
   font-size: 1rem;
   border: 1px solid var(--gold-light);
 }
-
-/* ── NEWSLETTER ───────────────────────────────────────────── */
-.newsletter {
-  background: var(--dark-card);
-  padding: 4rem 0;
-}
-.newsletter-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
-.newsletter h3 {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--cream);
-  margin-bottom: 0.4rem;
-}
-.newsletter p {
-  font-size: 0.9rem;
-  color: rgba(250,247,242,0.6);
-  max-width: 360px;
-}
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  min-width: 380px;
-}
-.newsletter-form input[type="email"] {
-  padding: 0.85rem 1.2rem;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(201,169,110,0.3);
-  color: var(--cream);
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color var(--transition);
-  border-radius: var(--radius);
-}
-.newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
-.newsletter-form input[type="email"]:focus { border-color: var(--gold); }
-.checkbox-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  cursor: pointer;
-}
-.checkbox-label input[type="checkbox"] { margin-top: 3px; flex-shrink: 0; accent-color: var(--gold); }
-.checkbox-label span { font-size: 0.78rem; color: rgba(250,247,242,0.55); line-height: 1.4; }
 
 /* ── FOOTER ───────────────────────────────────────────────── */
 .footer {
